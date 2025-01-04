@@ -22,9 +22,13 @@ func StartTCPServer() {
 		log.Fatal(err)
 	}
 	fmt.Println("Listening on port :9777")
-	defer ln.Close()
 	conn, err := ln.Accept()
+	if err != nil {
+		fmt.Printf("\nError: %v", err)
+		log.Fatal(err)
+	}
 	buf := make([]byte, 1024)
+	defer ln.Close()
 	for {
 		// read
 		n, err := conn.Read(buf)

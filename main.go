@@ -3,12 +3,11 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"go-tcp/client"
+	"go-tcp/server"
 	"log"
 	"os"
 	"strings"
-
-	"go-tcp/client"
-	"go-tcp/server"
 )
 
 func main() {
