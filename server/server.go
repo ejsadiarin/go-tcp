@@ -25,7 +25,6 @@ func StartTCPServer() {
 	conn, err := ln.Accept()
 	if err != nil {
 		fmt.Printf("\nError: %v", err)
-		log.Fatal(err)
 	}
 	buf := make([]byte, 1024)
 	defer ln.Close()
